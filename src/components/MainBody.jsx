@@ -96,8 +96,11 @@ const calLogic = (state, { actionType, valueType }) => {
         ...state,
         currentOperand: state.currentOperand.slice(0, -1),
       };
+
     case actions.clear:
       return {};
+    default:
+      return;
   }
 };
 
@@ -112,15 +115,21 @@ const computatin = ({ currentOperand, previousOperand, operation }) => {
     case "+":
       computatin = prev + current;
       break;
+
     case "-":
       computatin = prev - current;
       break;
+
     case "*":
       computatin = prev * current;
       break;
+
     case "÷":
       computatin = prev / current;
       break;
+
+    default:
+      return;
   }
   return computatin.toString();
 };
