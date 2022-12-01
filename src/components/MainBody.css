@@ -1,0 +1,54 @@
+:root {
+  --color-100: #f5eddc;
+  --color-200: #cfd2cf;
+  --color-300: #a2b5bb;
+  --color-400: #eb1d36;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to right, #f5eddc, #cfd2cf,#a2b5bb);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  padding: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+.component-imput-btn {
+  font-size: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+}
+.component-imput-btn:active,.component-imput-btn:hover {
+  background-color: var(--color-300);
+  color: white;
+  outline: none;
+}
+.component-imput-btn:nth-child(2),
+.component-imput-btn:nth-child(19) {
+  grid-column: span 2;
+}
+.component-screen {
+  background-color: rgba(0, 0, 0, 0.75);
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.component-screen-previous,.component-screen-operation {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.component-screen-current {
+  color: white;
+  font-size: 2.5rem;
+}
