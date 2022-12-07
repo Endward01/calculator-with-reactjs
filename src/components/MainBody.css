@@ -1,40 +1,49 @@
-:root {
-  --color-100: #f5eddc;
-  --color-200: #cfd2cf;
-  --color-300: #a2b5bb;
-  --color-400: #eb1d36;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 * {
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 body {
-  margin: 0;
-  background: linear-gradient(to right, #f5eddc, #cfd2cf,#a2b5bb);
-}
-.container {
+  background-color: #2e2e2e;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: #1f1f1f;
+  border-radius: 0.5rem;
   display: grid;
-  padding: 2rem;
+  padding: 12px 0;
   justify-content: center;
   grid-template-columns: repeat(4, 6rem);
-  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  grid-template-rows: minmax(7rem, 10rem) repeat(5, 6rem);
 }
 .component-imput-btn {
   font-size: 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.75);
+  border: 2px solid #1f1f1f;
+  color: #fff;
+  border-radius: 0.5rem;
 }
-.component-imput-btn:active,.component-imput-btn:hover {
-  background-color: var(--color-300);
+.operation-btn {
+  background-color: #131313;
+}
+.digit-btn {
+  background-color: #060606;
+}
+.component-imput-btn:active {
+  background-color: #2e2e2e;
   color: white;
   outline: none;
 }
+
 .component-imput-btn:nth-child(2),
 .component-imput-btn:nth-child(19) {
   grid-column: span 2;
 }
 .component-screen {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #1f1f1f;
   grid-column: 1/-1;
   display: flex;
   flex-direction: column;
@@ -44,11 +53,27 @@ body {
   word-wrap: break-word;
   word-break: break-all;
 }
-.component-screen-previous,.component-screen-operation {
+.component-screen-previous {
+  overflow-y: hidden;
+}
+.component-screen-previous,
+.component-screen-operation {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
+  text-align: right;
 }
 .component-screen-current {
   color: white;
   font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+  .component-imput-btn:hover {
+    background-color: #2e2e2e;
+    color: white;
+    outline: none;
+  }
 }

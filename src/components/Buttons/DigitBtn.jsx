@@ -1,9 +1,10 @@
 import { actions } from "../MainBody";
-import "../ScreenContainer.css";
+import "../MainBody.css";
+
 
 const DigitBtn = ({ dispatch, digit }) => {
   return (
-    <button onClick={() => dispatch({ actionType: actions.add, valueType: { digit } })} className="component-imput-btn">
+    <button onClick={() => dispatch({ actionType: actions.add, valueType: { digit } })} className="component-imput-btn digit-btn">
       {digit}
     </button>
   );
