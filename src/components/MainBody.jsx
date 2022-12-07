@@ -99,6 +99,7 @@ const calLogic = (state, { actionType, valueType }) => {
 
     case actions.clear:
       return {};
+
     default:
       return;
   }

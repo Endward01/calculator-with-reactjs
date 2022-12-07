@@ -1,9 +1,10 @@
 import { actions } from "../MainBody";
-import "../ScreenContainer.css";
+import "../MainBody.css";
+
 
 const OperationBtn = ({ dispatch, operation }) => {
   return (
-    <button onClick={() => dispatch({ actionType: actions.operationType, valueType: { operation } })} className="component-imput-btn">
+    <button onClick={() => dispatch({ actionType: actions.operationType, valueType: { operation } })} className="component-imput-btn operation-btn">
       {operation}
     </button>
   );
