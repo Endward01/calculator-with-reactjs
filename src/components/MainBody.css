@@ -15,7 +15,7 @@ body {
   background-color: #1f1f1f;
   border-radius: 0.5rem;
   display: grid;
-  padding: 12px 0;
+  padding: 12px;
   justify-content: center;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows: minmax(7rem, 10rem) repeat(5, 6rem);
@@ -68,9 +68,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: 12px;
-  }
   .component-imput-btn:hover {
     background-color: #2e2e2e;
     color: white;
